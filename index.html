@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PKHosting – Web Hosting & Domains for Pakistan</title>
+  <meta name="description" content="Web hosting, domains and SSL for Pakistani businesses. Explore PKHosting plans and search for your domain." />
+
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0b5ed7;
+      --dark: #0f172a;
+      --gray: #64748b;
+      --light: #f1f5f9;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== HEADER ========== */
+    header {
+      background: var(--white);
+      border-bottom: 1px solid #e2e8f0;
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--dark);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      padding: 40px 20px 48px;
+      text-align: center;
+      background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #dbeafe;
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 14px;
+      color: var(--dark);
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--gray);
+      margin-bottom: 28px;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(13, 110, 253, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: #eff6ff;
+    }
+
+    /* ========== DOMAIN SEARCH ========== */
+    .domain-section {
+      padding: 32px 20px;
+      background: var(--dark);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .domain-section h2 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+
+    .domain-section .sub {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin-bottom: 22px;
+    }
+
+    .domain-section .btn {
+      width: 100%;
+      max-width: 340px;
+    }
+
+    .domain-note {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 12px;
+    }
+
+    /* ========== FEATURES ========== */
+    .features {
+      padding: 40px 20px;
+      background: var(--light);
+    }
+
+    .features h2 {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-bottom: 24px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .feature-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+
+    .feature-card a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .feature-card a:hover {
+      text-decoration: underline;
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+
+    /* ========== FINAL CTA ========== */
+    .final-cta {
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: 1.45rem;
+      margin-bottom: 10px;
+    }
+
+    .final-cta p {
+      opacity: 0.9;
+      margin-bottom: 22px;
+      font-size: 1rem;
+    }
+
+    .final-cta .cta-group {
+      max-width: 340px;
+    }
+
+    .final-cta .btn-primary {
+      background: white;
+      color: var(--primary);
+      box-shadow: none;
+    }
+
+    .final-cta .btn-primary:hover {
+      background: #f1f5f9;
+    }
+
+    .final-cta .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .final-cta .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      padding: 24px 20px;
+      text-align: center;
+      background: var(--dark);
+      color: #94a3b8;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    /* Shown only when the page is opened with ?debug=1 (used for proof screenshots) */
+    #utm-debug {
+      display: none;
+      margin-top: 14px;
+      padding: 10px 12px;
+      background: #1e293b;
+      color: #e2e8f0;
+      border-radius: 8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.75rem;
+      text-align: left;
+      word-break: break-all;
+    }
+
+    /* ========== TABLET & UP ========== */
+    @media (min-width: 640px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .cta-group {
+        flex-direction: row;
+        justify-content: center;
+        max-width: none;
+      }
+
+      .final-cta .cta-group {
+        max-width: none;
+      }
+
+      .domain-section .btn {
+        width: auto;
+        min-width: 260px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr 1fr;
+        max-width: 640px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .feature-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 900px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="https://www.pkhosting.com/" class="logo" data-track>PK<span>Hosting</span></a>
+    <a href="https://www.pkhosting.com/hosting/" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.9rem;" data-track>
+      Get Started
+    </a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">Web hosting for Pakistani businesses</div>
+    <h1>Hosting and Domains for Your Business Website</h1>
+    <p>Choose a hosting plan, find your domain and get your website online with PKHosting.</p>
+
+    <div class="cta-group">
+      <a href="https://www.pkhosting.com/hosting/" class="btn btn-primary" data-track>
+        View Hosting Plans
+      </a>
+      <a href="https://www.pkhosting.com/domains/" class="btn btn-secondary" data-track>
+        Search a Domain
+      </a>
+    </div>
+  </section>
+
+  <!-- Domain Search -->
+  <section class="domain-section" id="domain-search">
+    <h2>Find Your Domain</h2>
+    <p class="sub">Search and register your domain on the PKHosting domain page.</p>
+
+    <a href="https://www.pkhosting.com/domains/" class="btn btn-primary" data-track>
+      Go to Domain Search
+    </a>
+    <p class="domain-note">Popular extensions: .com · .pk · .com.pk · .net · .org</p>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2>What You Can Get at PKHosting</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🖥️</div>
+        <h3>Web Hosting</h3>
+        <p>Hosting plans for personal sites, businesses, resellers and WordPress.</p>
+        <a href="https://www.pkhosting.com/hosting/" data-track>See hosting plans →</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3>Domains</h3>
+        <p>Search for a domain name for your business and register it with PKHosting.</p>
+        <a href="https://www.pkhosting.com/domains/" data-track>Search domains →</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>SSL Certificates</h3>
+        <p>Secure your website so visitors see it is protected.</p>
+        <a href="https://www.pkhosting.com/ssl/" data-track>Learn about SSL →</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>Compare Plans</h3>
+        <p>See the current plans and pricing side by side on the PKHosting pricing page.</p>
+        <a href="https://www.pkhosting.com/pricing/" data-track>View pricing →</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛠️</div>
+        <h3>Web Development</h3>
+        <p>Need help building your site? See the web development services.</p>
+        <a href="https://www.pkhosting.com/web-development/" data-track>Explore services →</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Talk to the Team</h3>
+        <p>Have a question before you choose a plan? Contact PKHosting.</p>
+        <a href="https://www.pkhosting.com/contact/" data-track>Contact us →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <h2>Ready to Launch Your Website?</h2>
+    <p>Pick a plan and search for your domain on PKHosting.</p>
+    <div class="cta-group">
+      <a href="https://www.pkhosting.com/hosting/" class="btn btn-primary" data-track>
+        View Hosting Plans
+      </a>
+      <a href="https://www.pkhosting.com/domains/" class="btn btn-secondary" data-track>
+        Search a Domain
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 PKHosting.com — Web hosting &amp; domains for Pakistan</p>
+    <p style="margin-top: 6px;">
+      <a href="https://www.pkhosting.com/" data-track>pkhosting.com</a>
+    </p>
+    <div id="utm-debug" aria-live="polite"></div>
+  </footer>
+
+  <script>
+    // UTM pass-through: capture UTM values from the landing URL, remember them for
+    // the visit, and add them to every PKHosting link marked with data-track.
+    (function () {
+      var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+      var params = new URLSearchParams(window.location.search);
+      var utm = {};
+
+      KEYS.forEach(function (key) {
+        var value = params.get(key);
+        try {
+          if (value) {
+            sessionStorage.setItem(key, value);       // new values in the URL win
+          } else {
+            value = sessionStorage.getItem(key);      // otherwise reuse the saved ones
+          }
+        } catch (e) { /* storage blocked: URL values still work for this page view */ }
+        if (value) utm[key] = value;
+      });
+
+      window.pkUtm = utm;
+
+      document.querySelectorAll('a[data-track]').forEach(function (link) {
+        try {
+          var url = new URL(link.getAttribute('href'), window.location.href);
+          Object.keys(utm).forEach(function (key) {
+            url.searchParams.set(key, utm[key]);
+          });
+          link.href = url.toString();
+        } catch (e) { /* leave the link as it is */ }
+      });
+
+      // Debug strip for proof screenshots: open the page with ?debug=1
+      if (params.get('debug') === '1') {
+        var box = document.getElementById('utm-debug');
+        var hostingLink = document.querySelector('.cta-group a[data-track]');
+        box.style.display = 'block';
+        box.textContent = 'Captured UTM: ' + (Object.keys(utm).length ? JSON.stringify(utm) : 'none') +
+          '\nCTA link → ' + (hostingLink ? hostingLink.href : '');
+        box.style.whiteSpace = 'pre-wrap';
+      }
+    })();
+  </script>
+</body>
+</html>
